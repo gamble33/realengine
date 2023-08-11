@@ -5,7 +5,9 @@
 extern realengine::Application* realengine::CreateApplication();
 
 int main(int argc, char** argv) {
-	printf("realengine started!");
+	realengine::Log::Init();
+	REALENGINE_CORE_WARN("Initialized Logger!");
+	REALENGINE_INFO("Hello World!");
 	auto app = realengine::CreateApplication();
 	app->Run();
 	delete app;
